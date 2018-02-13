@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'pg', '~> 1.0'
   
 #bootstrap
 gem 'bootstrap-sass', '~> 3.3.7'
@@ -55,7 +54,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '~> 1.0'
+  gem 'pg', '~> 0.11'
   gem 'rails_12factor'
 end
 
