@@ -18,12 +18,28 @@
   </div>
 </nav>
 
-<h1>Showing new article</h1>
+<h1>Edit Existing Article</h1>
 
-<p>
-  Title: <%= @article.title %>
-</p>
+<% if @article.errors.any? %> 
+  <ul>
+    <h2 class="error">The following errors prevented the article from being created</h2>
+    <% @article.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %> 
+  </ul> 
+<% end %>
 
-<p>
-  Description: <%= @article.description %> 
-</p>
+<%= form_for @article do |f| %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %> </br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
