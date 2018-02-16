@@ -27,4 +27,12 @@ h2, h1 {
   color: red;
 }
 
+.newart {
+  text-align: center;
+  padding-left: 50px; 
+}
+
+.table th {
+    text-align: center;
+}
 

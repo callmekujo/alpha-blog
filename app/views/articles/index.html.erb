@@ -18,29 +18,30 @@
   </div>
 </nav>
 
-<h1>Edit Existing Article</h1>
+<h1>All Articles</h1>
 
-<% if @article.errors.any? %> 
-  <ul>
-    <h2 class="error">The following errors prevented the article from being created</h2>
-    <% @article.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %> 
-  </ul> 
-<% end %>
+<div class="container">
 
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %> </br>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+<table class="table table-hover table-responsive">
+  <thead>
+    <tr>
+      <th class="heading">Title</th>
+      <th class="heading">Description</th>
+      <th class="heading">Action</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @articles.each do |articles| %>
+    <tr>
+      <td><%= articles.title %></td>
+      <td><%= articles.description %></td>
+      <td><%= link_to 'Edit', edit_article_path(articles) %></td>
+      <td><%= link_to 'Show', article_path(articles) %></td>
+    </tr>
+  </tbody>
+  <% end %> 
+</table>
+<%= link_to "Create new article", new_article_path, class: "newart" %> 
 
-<% end %>
-<%= link_to "Back to all articles", articles_path %>
+</div>
