@@ -44,8 +44,22 @@ h2, h1 {
   color: black;
 }
 
-#headingmain {
-  float: left;
+.btn {
+  background-color: #54A8D0;
+}
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #54A8D0;
   color: black;
-  font-size: 1.7em;
+  
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer small {
+  float: left;
 }
