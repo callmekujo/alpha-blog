@@ -36,4 +36,16 @@ h2, h1 {
     text-align: center;
 }
 
+#navigation {
+  background-color: #54A8D0;
+}
 
+#heading {
+  color: black;
+}
+
+#headingmain {
+  float: left;
+  color: black;
+  font-size: 1.7em;
+}
