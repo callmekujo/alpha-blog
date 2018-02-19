@@ -40,6 +40,10 @@ h2, h1 {
   background-color: #54A8D0;
 }
 
+#navigation a:hover {
+  background-color: white;
+}
+
 #heading {
   color: black;
 }
@@ -47,6 +51,7 @@ h2, h1 {
 .btn {
   background-color: #54A8D0;
 }
+
 
 .footer {
   margin-top: 45px;
@@ -70,4 +75,5 @@ h2, h1 {
 
 .footer a:hover {
   color: black;
+  text-decoration: none;
 }
