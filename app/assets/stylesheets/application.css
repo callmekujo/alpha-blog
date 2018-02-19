@@ -63,3 +63,11 @@ h2, h1 {
 .footer small {
   float: left;
 }
+
+.aboutfooter {
+  float: right;
+}
+
+.footer a:hover {
+  color: black;
+}
