@@ -92,3 +92,7 @@ h2, h1 {
   margin-top: 0;
 }
 
+.article-title {
+  font-weight: bold;
+}
+
