@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-  
+#for secure password authentication
+gem 'bcrypt', '~> 3.1.7'
 #for CSS
 gem 'autoprefixer-rails'
 #Use JQuery for Bootstrap
