@@ -9,6 +9,11 @@
       <th class="heading">Title</th>
       <th class="heading">Description</th>
       <th class="heading">Action</th>
+      <th class="heading"></th>
+      <th class="heading"></th>
+      <th class="heading">Created By</th>
+      <th class="heading">Created</th>
+      <th class="heading">Updated</th>
     </tr>
   </thead>
   
@@ -16,10 +21,13 @@
     <% @articles.each do |articles| %>
     <tr>
       <td><%= link_to articles.title, article_path(articles), class: "article-title" %></td>
-      <td><%= truncate(articles.description, length:100) %></td>
+      <td><%= truncate(articles.description, length:20) %></td>
       <td><%= link_to "Edit", edit_article_path(articles), class: "btn btn-xs btn-primary" %></td>
       <td><%= link_to 'Show', article_path(articles), class: "btn btn-xs btn-success" %></td>
       <td><%= link_to "Delete", article_path(articles), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %></td>
+      <td><small><%= articles.user.username if articles.user %></small></td> 
+      <td><small><%= time_ago_in_words(articles.created_at) %> ago</small></td>
+      <td><small><%= time_ago_in_words(articles.updated_at) %> ago</small></td>
     </tr>
   </tbody>
   <% end %> 
