@@ -99,3 +99,8 @@ h2, h1 {
 #cancelrequest {
   text-align: center;
 }
+
+.user-listing {
+  list-style: none;
+  padding-left: 0;
+}
