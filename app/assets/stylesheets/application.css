@@ -29,7 +29,7 @@ h2, h1 {
 
 .newart {
   text-align: center;
-  padding-left: 50px; 
+  margin-bottom: 5px;
 }
 
 .table th {
@@ -103,4 +103,10 @@ h2, h1 {
 .user-listing {
   list-style: none;
   padding-left: 0;
+}
+
+.paginate {
+ border-top: 1px solid #54A8D0; 
+ margin-left: 150px;
+ margin-right: 150px;
 }

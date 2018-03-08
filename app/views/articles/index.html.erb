@@ -1,6 +1,7 @@
 
 <h1>All Articles</h1>
-
 <%= render 'article', obj: @articles %>
 <%= link_to "Create new article", new_article_path, class: "newart" %> 
-
+<div align="center">
+  <%= will_paginate class: "paginate" %>
+</div>

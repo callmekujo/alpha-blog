@@ -7,6 +7,10 @@ end
 
 #for secure password authentication
 gem 'bcrypt', '~> 3.1.7'
+#pagination
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+#bootstrap for pagination
+gem 'bootstrap-will_paginate', '~> 1.0'
 #for CSS
 gem 'autoprefixer-rails'
 #Use JQuery for Bootstrap
