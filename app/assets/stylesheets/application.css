@@ -110,3 +110,17 @@ h2, h1 {
  margin-left: 150px;
  margin-right: 150px;
 }
+
+.glyphicon {
+  color: white;
+  padding-right: 4px;
+}
+
+#heading-login {
+  color: black;
+  padding-left: 5px;
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+

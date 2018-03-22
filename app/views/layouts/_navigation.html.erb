@@ -15,5 +15,9 @@
             </ul>
         </li>
     </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><span class="glyphicon glyphicon-log-in"><%= link_to "Login", login_path, id: "heading-login" %></span></li>
+      <li><span class="glyphicon glyphicon-log-out"><%= link_to "Logout", logout_path, method: :delete, id: "heading-login" %></span></li>
+    </ul>
   </div>
 </nav>
