@@ -3,7 +3,9 @@
   <div class="jumbotron" id="tron">
     <h1>Information Security</h1> 
     <p>Ever wanted to be on the forefront of cyber threats? Understand them? Learn how they are created?</p> 
-    <%= link_to "Sign up now", "/signup", class: "btn btn-primary btn-lg btn-xlarge" %> 
+    <% if !logged_in? %> 
+      <%= link_to "Sign up now", "/signup", class: "btn btn-primary btn-lg btn-xlarge" %> 
+    <% end %>
   </div>
   <p style="background-color:black; color:white">
     <h3 style="text-align:center">Certifications you'll need to get there</h3>
@@ -19,8 +21,5 @@
   
 </body>
 
-<!-- <script type="text/javascript">
-  alert("Welcome to my dope website!");
-</script> --> 
 
 

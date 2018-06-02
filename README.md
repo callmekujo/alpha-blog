@@ -1,1 +1,1 @@
-This is the repository for the first alpha-blog app of the Complete Ruby on Rails Developer Course
+Some really cool stuff to put in here that makes this look totally bad ass

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse" id="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to image_tag("logo.png"), root_path, class: "navbar-brand", id: "headingmain" %>
+      <%= link_to image_tag("logo.png"), root_path, class: "navbar-brand", id: "logo" %>
     </div>
     <ul class="nav navbar-nav">
       <li><%= link_to "About Us", about_path, id: "heading" %></li>
@@ -16,8 +16,12 @@
         </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><span class="glyphicon glyphicon-log-in"><%= link_to "Login", login_path, id: "heading-login" %></span></li>
-      <li><span class="glyphicon glyphicon-log-out"><%= link_to "Logout", logout_path, method: :delete, id: "heading-login" %></span></li>
+      <% if !logged_in? %>
+        <li><%= link_to "Login", login_path, id: "heading" %></li>
+        <li><%= link_to "Sign Up", signup_path, id: "heading" %></li>
+      <% else %>
+        <li><%= link_to "Logout", logout_path, method: :delete, id: "heading" %></li>
+      <% end %>
     </ul>
   </div>
 </nav>
