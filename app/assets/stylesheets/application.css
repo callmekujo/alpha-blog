@@ -111,6 +111,15 @@ h2, h1 {
  margin-right: 150px;
 }
 
+#logout {
+  color: red;
+}
 
+.dropdown .open {
+  background-color: transparent;
+}
 
+.login-error {
+  color: red;
+}
 

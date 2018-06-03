@@ -42,4 +42,8 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+  
+  def username
+    @user = User.logged_in
+  end
 end

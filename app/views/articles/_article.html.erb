@@ -19,9 +19,14 @@
   <tr>
     <td><%= link_to articles.title, article_path(articles), class: "article-title" %></td>
     <td><%= truncate(articles.description, length:20) %></td>
-    <td><%= link_to "Edit", edit_article_path(articles), class: "btn btn-xs btn-primary" %></td>
-    <td><%= link_to 'Show', article_path(articles), class: "btn btn-xs btn-success" %></td>
-    <td><%= link_to "Delete", article_path(articles), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %></td>
+    <td><%= link_to "Show", article_path(articles), class: "btn btn-xs btn-success" %></td>
+    <% if logged_in? && current_user == articles.user %>
+      <td><%= link_to "Edit", edit_article_path(articles), class: "btn btn-xs btn-primary" %></td>
+      <td><%= link_to "Delete", article_path(articles), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %></td>
+    <% else %>
+      <td></td>
+      <td></td>
+    <% end %>
     <td><small><%= articles.user.username if articles.user %></small></td> 
     <td><small><%= time_ago_in_words(articles.created_at) %> ago</small></td>
     <td><small><%= time_ago_in_words(articles.updated_at) %> ago</small></td>
