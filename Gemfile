@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 #updating loofah for vulnerability 
-gem 'loofah', '~> 2.2', '>= 2.2.1'
+gem 'loofah', '~> 2.3'
 #for secure password authentication
 gem 'bcrypt', '~> 3.1.7'
 #pagination
